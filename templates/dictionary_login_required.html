@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="login-required-container">
+    <h1>Dictionary Access Restricted</h1>
+    <p>You need to be logged in to view the dictionary.</p>
+    <div class="auth-links">
+        <a href="{{ url_for('login') }}" class="button">Login</a>
+        <p>Don't have an account? <a href="{{ url_for('register') }}">Register</a></p>
+    </div>
+</div>
+{% endblock %}
