@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<!-- Link to the external CSS file for dictionary styling -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dictionary.css') }}" />
+
+<!-- Title of the dictionary page with a link to refresh the page -->
+<div class="dictionary__title">
+    <h1><a href="/dictionary">Dictionary</a></h1>
+</div>
+
+<!-- Search input and button for filtering dictionary entries -->
+<div class="search-container">
+    <input type="text" id="search-input" placeholder="Search for a sign...">
+    <button onclick="searchDictionary()">Search</button>
+</div>
+
+<!-- Container for displaying dictionary entries -->
+<div id="search-results">
+    <!-- Loop through each definition passed from the backend -->
+    {% for definition in definitions %}
+    <div class="definition" data-term="{{ definition[1] }}">
+        <!-- Display the sign title -->
+        <div class="sign__title">
+            {{ definition[1] }}
+        </div>
+        <!-- Display the sign description as a dropdown -->
+        <details class="sign__description">
+            <summary>Description</summary>
+            <p>{{ definition[2] }}</p>
+        </details>
+        <!-- Display the image associated with the sign -->
+        <img class="sign__img" src="{{ definition[3] }}" alt="{{ definition[1] }}">
+    </div>
+    {% endfor %}
+</div>
+
+<script>
+// Function to filter dictionary entries based on user input
+function searchDictionary() {
+    // Get the user input and convert to lowercase for case-insensitive comparison
+    var input = document.getElementById('search-input').value.toLowerCase();
+    // Get all definition elements
+    var definitions = document.getElementsByClassName('definition');
+    
+    // Loop through each definition
+    for (var i = 0; i < definitions.length; i++) {
+        // Get the term associated with the current definition
+        var term = definitions[i].getAttribute('data-term').toLowerCase();
+        // If the term includes the input, show the definition; otherwise, hide it
+        if (term.includes(input)) {
+            definitions[i].style.display = "";
+        } else {
+            definitions[i].style.display = "none";
+        }
+    }
+}
+
+// Add event listener to search input for 'Enter' key press
+document.getElementById('search-input').addEventListener('keyup', function(event) {
+    // If 'Enter' key is pressed, trigger the search function
+    if (event.key === 'Enter') {
+        searchDictionary();
+    }
+});
+</script>
+
+{% endblock %}

@@ -1,0 +1,363 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+    background: #2d3142;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.navbar__btn .button {
+    padding: 14px 20px;
+    white-space: nowrap;
+    font-size: 18px;
+  }
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo {
+    background: #2d3142;
+    color: #BFC0C0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links,
+.button,
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    border-radius: 4px;
+    color: #fff;
+    transition: background 0.3s ease;
+}
+
+.navbar__links,
+.button {
+    background: #F8752B;
+}
+
+.buttons {
+    background: #2d3142;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.buttons:hover {
+    background: #4F5D75;
+}
+
+.button:hover,
+.navbar__links:hover {
+    background: #4837ff;
+}
+
+/* Main Content styles */
+.main {
+    background-image: linear-gradient(#2d3142, #ededed);
+}
+
+.main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: 0 auto;
+    height: 90vh;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.main__content {
+    color: #fff;
+    -webkit-text-stroke: 0.5px rgb(94, 94, 94);
+}
+
+.main__content h1,
+.main__content h2 {
+    font-size: 4rem;
+    background-color: #F8752B;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main__content h2 {
+    margin-top: 10px;
+}
+
+.main__content p {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.main__btn {
+    font-size: 1rem;
+    background-color: #F8752B;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: background-color 0.35s;
+    -webkit-text-stroke: 1px #fff;
+}
+
+.main__btn a {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+}
+
+.main__btn:hover {
+    background-color: #4837ff;
+}
+
+.main__img--container {
+    text-align: center;
+}
+
+#main__img {
+    height: 80%;
+    width: 80%;
+    border: 3px solid #2D3142;
+}
+
+/* Info section styles */
+.info__container {
+    background-color: #ededed;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info__part {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.info__part--wrapper {
+    display: flex;
+}
+
+.info__part--items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 16px;
+    text-align: left;
+    width: 400px;
+}
+
+.info__part--items h2 {
+    margin-bottom: 16px;
+    color: #000000;
+}
+
+.info__part--items a {
+    color: #000000;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer styles */
+.footer__container {
+    background-color: #2d3142;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#footer__logo {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.footer__links {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__link--wrapper {
+    display: flex;
+}
+
+.footer__link--items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 16px;
+    text-align: left;
+    width: 160px;
+}
+
+.footer__link--items h2 {
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+.footer__link--items a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease-out;
+}
+
+.footer__link--items a:hover {
+    color: #e9e9e9;
+}
+
+/* Social Icons */
+.social__icon--link {
+    color: #fff;
+    font-size: 24px;
+}
+
+.social__media {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.social__media--wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+}
+
+.social__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+}
+
+.social__logo {
+    color: #fff;
+    justify-self: start;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.website__rights {
+    color: #fff;
+}
+
+/* Login buttons styles */
+.login__btn,
+.register__btn {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 200px;
+    width: 100%;
+    font-size: 16px;
+    padding: 14px 32px;
+    background-color: #F8752B;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.35s;
+}
+
+.login__btn:hover,
+.register__btn:hover {
+    background-color: #4837ff;
+}
+
+.login__btn a,
+.register__btn a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+}
+
+/* Login page styles */
+.login {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    width: 400px;
+}
+
+.login__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    border: 40px solid;
+    border-image: linear-gradient(to right, #ff6b6b, #ff922b) 1;
+}
+
+.login__part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__container button {
+    margin: 10px;
+}

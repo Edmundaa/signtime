@@ -1,0 +1,138 @@
+.dictionary__title h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #2D3142;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#search-input {
+    font-size: 1.1em;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #2D3142;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-container button {
+    font-size: 1.1em;
+    padding: 10px 20px;
+    background-color: #2D3142;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+#search-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.definition {
+    width: 45%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(#f0f0f0, #e0e0e0);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.definition:hover {
+    transform: translateY(-5px);
+}
+
+.sign__title {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #2D3142;
+    font-weight: bold;
+}
+
+.sign__description {
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #4F5D75;
+}
+
+.sign__img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border: 3px solid #2D3142;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .definition {
+        width: 100%;
+    }
+
+    .dictionary__title h1 a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .search-container {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    #search-input {
+        font-size: 1.1em;
+        padding: 10px;
+        width: 300px;
+    }
+
+    .search-container button {
+        font-size: 1.1em;
+        padding: 10px 20px;
+    }
+
+    #search-results {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .definition {
+        width: 100%;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sign__title {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .sign__description {
+        font-size: 1em;
+        margin-bottom: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .sign__img {
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+    }
+}
