@@ -58,8 +58,7 @@ def home():
   return render_template('index.html')
 
 
-# Displays all teddys in the database
-# TODO: link each teddy to its own details page
+
 @app.route('/dictionary')
 def all_definitions():
     if not current_user.is_authenticated:
@@ -72,25 +71,6 @@ def all_definitions():
     conn.close()
     return render_template("dictionary.html", definitions=definitions)
 
-
-# Individual teddy details page.
-@app.route('/teddy/<int:id>')
-def teddy_details(id):
-  # print("The teddy id is {}".format(id))  # DEBUG
-  conn = sqlite3.connect(app.config['DATABASE'])
-  cur = conn.cursor()
-  
-  # You might be asking yourself why you couldn't write a query like: cur.execute(f"SELECT * FROM Teddy WHERE id={id};") 
-  # Simply put, this is insecure and allows for SQL injection.  For example, if someone set variable id="2; DROP TABLE *;" then the table gets deleted.
-  # Instead, it's better to use the id=? and to provide the parameter as a separate tuple.  "(id,)" looks weird but it's simply a tuple (collection) with one value.
-  cur.execute("SELECT * FROM Teddy WHERE id=?;",(id,))
-  # fetchone returns a tuple containing the data for one entry
-  teddy = cur.fetchone()
-  conn.close()
-  return render_template("teddy.html", teddy=teddy)
-
-
-# about Teddy Bears Picnic
 @app.route('/about')
 def about():
   formstuff = None
@@ -159,6 +139,14 @@ def logout():
 @app.route('/terms-and-conditions')
 def terms_and_conditions():
     return render_template('terms_and_conditions.html')
+
+#@app.route('/terms')
+#def terms_and_conditions():
+ #S   return render_template('terms.html')
+ # SignAi route
+@app.route('/terms')
+def terms():
+    return render_template('terms.html')
 
 if __name__ == '__main__':
   app.run(debug=app.config['DEBUG'], port=8080, host='0.0.0.0') 
