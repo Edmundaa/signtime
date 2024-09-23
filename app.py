@@ -155,5 +155,10 @@ def logout():
     flash('Logged out successfully.')
     return redirect(url_for('home'))
 
+# Terms and Conditions route
+@app.route('/terms-and-conditions')
+def terms_and_conditions():
+    return render_template('terms_and_conditions.html')
+
 if __name__ == '__main__':
   app.run(debug=app.config['DEBUG'], port=8080, host='0.0.0.0') 

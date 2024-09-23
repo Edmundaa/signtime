@@ -1,10 +1,35 @@
 {% extends 'layout.html' %}
 
 {% block content %}
+<div class="construction-notice">
+  <strong>Notice:</strong> Our AI Sign Language Reader is currently under construction and will be completed in the next few months. Stay tuned for updates!
+</div>
 <div class="signai-container">
-  <div class="under-construction">
-      <h1>Under Construction</h1>
-      <p>This page is currently under construction. Please check back later.</p>
+  <div class="signai-content">
+    <h1>Introducing Our AI Sign Language Reader</h1>
+    <h2>See the World, Hear the Words</h2>
+
+    <p>Our innovative AI-powered sign language reader is a groundbreaking tool designed to bridge the communication gap for individuals who are deaf or hard of hearing. Simply point your camera at a signer, and our advanced technology will instantly recognize and translate sign language into English text.</p>
+
+    <h3>How it Works:</h3>
+    <ol>
+      <li><strong>Capture:</strong> Open our app and point your device's camera at the signer.</li>
+      <li><strong>Recognize:</strong> Our AI algorithm analyzes the hand gestures and facial expressions to accurately identify the signs.</li>
+      <li><strong>Translate:</strong> The recognized signs are then translated into English text, displayed directly on your screen.</li>
+    </ol>
+
+    <h3>Key Features:</h3>
+    <ul>
+      <li><strong>Real-time translation:</strong> Enjoy seamless communication with immediate translation.</li>
+      <li><strong>Multiple sign languages:</strong> Our model supports a variety of sign languages, making it accessible to a global audience.</li>
+      <li><strong>High accuracy:</strong> Our advanced technology ensures reliable and accurate translations.</li>
+      <li><strong>User-friendly interface:</strong> Our intuitive app design makes it easy for anyone to use.</li>
+    </ul>
+
+    <h3>Empower Communication:</h3>
+    <p>Our AI sign language reader is more than just a tool; it's a catalyst for greater inclusivity and understanding. By breaking down communication barriers, we're empowering individuals to connect with the world around them.</p>
+
+    <p><strong>Try it today and experience the future of communication.</strong></p>
   </div>
 </div>
 
@@ -18,31 +43,75 @@
     }
 
     /* Specific styles for this page */
+    .construction-notice {
+        background-color: #fff3cd;
+        border: 1px solid #ffeeba;
+        color: #856404;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-weight: bold;
+        width: 100%;
+    }
+
     .signai-container {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
         min-height: 80vh;
         background-color: #f5f5f5;
+        padding: 2rem;
     }
 
-    .under-construction {
-        text-align: center;
+    .signai-content {
+        max-width: 800px;
+        text-align: left;
         background-color: white;
         padding: 2rem;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .under-construction h1 {
+    .signai-content h1 {
         font-size: 2.5rem;
         color: #333;
         margin-bottom: 1rem;
     }
 
-    .under-construction p {
-        font-size: 1.2rem;
-        color: #666;
+    .signai-content h2 {
+        font-size: 1.8rem;
+        color: #444;
+        margin-bottom: 1rem;
     }
-</style>;''
+
+    .signai-content h3 {
+        font-size: 1.5rem;
+        color: #555;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .signai-content p, .signai-content li {
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+
+    .signai-content ul, .signai-content ol {
+        margin-left: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .construction-notice {
+        background-color: #fff3cd;
+        border: 1px solid #ffeeba;
+        color: #856404;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 4px;
+        text-align: center;
+        font-weight: bold;
+    }
+</style>
 {% endblock %}

@@ -1,0 +1,31 @@
+.terms-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.terms-container h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.terms-container h2 {
+    font-size: 20px;
+    color: #444;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.terms-content {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.terms-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
