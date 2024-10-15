@@ -148,5 +148,10 @@ def terms_and_conditions():
 def terms():
     return render_template('terms.html')
 
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+
 if __name__ == '__main__':
   app.run(debug=app.config['DEBUG'], port=8080, host='0.0.0.0') 
